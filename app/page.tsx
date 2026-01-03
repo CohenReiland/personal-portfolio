@@ -152,8 +152,47 @@ export default function Home() {
           */}
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section id ="contact" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-4xl mx-auto w-full text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12">
+            Contact Me
+          </h2>
+
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+            I'm always open to new opportunities and connections. Whether you want to discuss a project, 
+            ask a question, or just say hi, feel free to reach out!
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            {/* Email Button */}
+            <a href="mailto:cohen200521@gmail.com" 
+            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+              <span className="text-2xl">📧</span>
+              <span className="font-medium">Email</span>
+            </a>
+
+            {/* GitHub Button */}
+            <a href="https://github.com/CohenReiland" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+              <span className="text-2xl">💻</span>
+              <span className="font-medium">GitHub</span>
+            </a>
+
+            {/* LinkedIn Button */}
+            <a href="https://www.linkedin.com/in/cohen-reiland" target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+              <span className="text-2xl">🔗</span>
+              <span className="font-medium">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div className="mt-16 text-gray-500 dark:text-gray-400">
+        <p>© {new Date().getFullYear()} Cohen Reiland. Built with Next.js and Tailwind CSS.</p>
+          </div>
     </div>
-
-
   );
 }
