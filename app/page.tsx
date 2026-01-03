@@ -10,13 +10,13 @@ export default function Home() {
         <h1 className="max-w-4xl mx-auto text-center">
           Hi, I'm <span className="text-blue-600 dark:text-blue-400">Cohen Reiland</span>
         </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-            Computer Science Student | Runner | Gamer | Aspiring Developer
-          </p>
-          <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            Sophomore at NDSU exploring the intersection of technology, endurance, and creativity.
-          </p>
-          <div/>
+        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
+          Computer Science Student | Runner | Gamer | Aspiring Developer
+        </p>
+        <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+          Sophomore at NDSU exploring the intersection of technology, endurance, and creativity.
+        </p>
+        <div />
       </section>
 
       {/* About Section */}
@@ -28,11 +28,11 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              I'm a sophomore at NDSU studying Computer Science. I've learned Java fundamentals, data structures, 
-              and I'm currently diving into modern software development, databases, and programming languages. 
+              I'm a sophomore at NDSU studying Computer Science. I've learned Java fundamentals, data structures,
+              and I'm currently diving into modern software development, databases, and programming languages.
               I love building things and solving problems.
             </p>
-            </div>
+          </div>
         </div>
       </section>
 
@@ -57,8 +57,8 @@ export default function Home() {
                 </span>
                 <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
                   CSS
-                  </span>
-                  </div>
+                </span>
+              </div>
             </div>
 
             {/* Frameworks */}
@@ -111,6 +111,49 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20">
+        <div className="max-w-4xl mx-auto w-full">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            Projects
+          </h2>
+
+          <div className="bg-gray-50 dark:bg-gray-800 p-12 rounded-lg text-center">
+            <div className="text-6xl mb-6">🚧</div>
+            <div className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              Projects Coming Soon!
+            </div>
+            <p className="text-gray-600 dark:text-gray-300 max-w-md mx-auto">
+              I'm currently working on some exciting projects. Stay tuned!
+            </p>
+          </div>
+
+          {/* This is what a project card will look like when you add them later */}
+          {/* 
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                Project Name
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Project description goes here. What does it do? What technologies did you use?
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                  React
+                </span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                  TypeScript
+                </span>
+              </div>
+            </div>
+          </div>
+          */}
+        </div>
+      </section>
     </div>
+
+
   );
 }
