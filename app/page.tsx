@@ -6,7 +6,7 @@ export default function Home() {
       <Navbar />
 
       {/* Main Section With Information */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 bg-stone-100 dark:bg-zinc-800">
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-6 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Hi, I'm <span className="text-blue-600 dark:text-blue-400">Cohen Reiland</span>

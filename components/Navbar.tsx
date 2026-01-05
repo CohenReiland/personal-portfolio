@@ -7,14 +7,39 @@ export default function Navbar() {
     const { theme, toggleTheme } = useTheme()
     const [scrolled, setScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [activeSection, setActiveSection] = useState<string>("home")
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20)
+            
         }
 
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section[id]")
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id)
+                    }
+                })
+            },
+            {
+                root: null,
+                rootMargin: "-50% 0px -50% 0px",
+                threshold: 0
+            }
+        )
+
+        sections.forEach((section) => observer.observe(section))
+
+        return () => observer.disconnect()
     }, [])
 
     const scrollToSection = (id: string) => {
@@ -47,36 +72,46 @@ export default function Navbar() {
                     <div className="flex flex-col items-center gap-8 flex-1 justify-center">
                         <button
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                            className="group flex flex-col items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                            title="Home"
+                            className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "home"
+                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                                }`} title="Home"
                         >
                             <span className="text-2xl">🏠</span>
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">Home</span>
                         </button>
                         <button onClick={() => scrollToSection('about')}
-                            className="group flex flex-col items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                            title="About"
+                            className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "about"
+                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                                }`} title="About"
                         >
                             <span className="text-2xl">👤</span>
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">About</span>
                         </button>
                         <button onClick={() => scrollToSection('skills')}
-                            className="group flex flex-col items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                            title="Skills"
+                            className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "skills"
+                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                                }`} title="Skills"
                         >
                             <span className="text-2xl">⚡</span>
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">Skills</span>
                         </button>
                         <button onClick={() => scrollToSection('projects')}
-                            className="group flex flex-col items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                            title="Projects"
+                            className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "projects"
+                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                                }`} title="Projects"
                         >
                             <span className="text-2xl">💼</span>
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">Projects</span>
                         </button>
                         <button onClick={() => scrollToSection('contact')}
-                            className="group flex flex-col items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                            title="Contact"
+                            className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "contact"
+                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                                }`} title="Contact"
                         >
                             <span className="text-2xl">📧</span>
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">Contact</span>
@@ -142,25 +177,46 @@ export default function Navbar() {
                         window.scrollTo({ top: 0, behavior: 'smooth' })
                         setMobileMenuOpen(false)
                     }}
-                        className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                        className={`flex items-center gap-4 py-3 px-4 rounded-lg transition-colors ${activeSection === "home"
+                            ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            }`}
                     >
                         <span className="text-2xl">🏠</span>
                         <span className="text-lg font-medium">Home</span>
                     </button>
                     <button onClick={() => scrollToSection('about')}
-                        className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                        className={`flex items-center gap-4 py-3 px-4 rounded-lg transition-colors ${activeSection === "about"
+                            ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            }`}
                     >
                         <span className="text-2xl">👤</span>
                         <span className="text-lg font-medium">About</span>
                     </button>
-                    <button onClick={() => scrollToSection('projects')}
-                        className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                    <button onClick={() => scrollToSection('skills')}
+                        className={`flex items-center gap-4 py-3 px-4 rounded-lg transition-colors ${activeSection === "skills"
+                            ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            }`}
                     >
-                        <span className="text-2xl">💻</span>
+                        <span className="text-2xl">⚡</span>
+                        <span className="text-lg font-medium">Skills</span>
+                    </button>
+                    <button onClick={() => scrollToSection('projects')}
+                        className={`flex items-center gap-4 py-3 px-4 rounded-lg transition-colors ${activeSection === "projects"
+                            ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            }`}
+                    >
+                        <span className="text-2xl">💼</span>
                         <span className="text-lg font-medium">Projects</span>
                     </button>
                     <button onClick={() => scrollToSection('contact')}
-                        className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                        className={`flex items-center gap-4 py-3 px-4 rounded-lg transition-colors ${activeSection === "contact"
+                            ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            }`}
                     >
                         <span className="text-xl">📧</span>
                         <span className="text-lg font-medium">Contact</span>
