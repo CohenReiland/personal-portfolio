@@ -2,11 +2,11 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-<div className="min-h-screen bg-stone-100 dark:bg-zinc-900 transition-colors pt-16 md:pt-0 md:pl-24">
+    <div className="min-h-screen bg-stone-100 dark:bg-zinc-900 transition-colors pt-16 md:pt-0 md:pl-24">
       <Navbar />
 
       {/* Main Section With Information */}
-      <section className="min-h-screen flex items-center justify-center px-6 bg-stone-100 dark:bg-zinc-800">
+      <section className="relative min-h-screen flex items-center justify-center px-6 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Hi, I'm <span className="text-blue-600 dark:text-blue-400">Cohen Reiland</span>
@@ -18,10 +18,11 @@ export default function Home() {
             Sophomore at NDSU exploring the intersection of technology, endurance, and creativity.
           </p>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen flex items-center justify-center px-6 py-20 bg-stone-200 dark:bg-zinc-900">
+      <section id="about" className="relative min-h-screen flex items-center justify-center px-6 py-20 bg-stone-200 dark:bg-zinc-900">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             About Me
@@ -35,9 +36,10 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-100 dark:to-zinc-800" />
       </section>
 
-      <section id="skills" className="min-h-screen flex items-center justify-center px-6 py-20 bg-stone-100 dark:bg-zinc-800">
+      <section id="skills" className="relative min-h-screen flex items-center justify-center px-6 py-20 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Skills
@@ -111,10 +113,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20 bg-stone-200 dark:bg-zinc-900">
+      <section id="projects" className="relative min-h-screen flex items-center justify-center px-6 py-20 bg-stone-200 dark:bg-zinc-900">
         <div className="max-w-4xl mx-auto w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Projects
@@ -152,48 +155,50 @@ export default function Home() {
           </div>
           */}
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-100 dark:to-zinc-800" />
       </section>
 
       {/* Contact Section */}
-      <section id ="contact" className="min-h-screen flex items-center justify-center px-6 py-20 bg-stone-100 dark:bg-zinc-800">
+      <section id="contact" className="relative min-h-screen flex items-center justify-center px-6 py-20 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto w-full text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12">
             Contact Me
           </h2>
 
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-            I'm always open to new opportunities and connections. Whether you want to discuss a project, 
+            I'm always open to new opportunities and connections. Whether you want to discuss a project,
             ask a question, or just say hi, feel free to reach out!
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             {/* Email Button */}
-            <a href="mailto:cohen200521@gmail.com" 
-            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+            <a href="mailto:cohen200521@gmail.com"
+              className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
               <span className="text-2xl">📧</span>
               <span className="font-medium">Email</span>
             </a>
 
             {/* GitHub Button */}
             <a href="https://github.com/CohenReiland" target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+              className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
               <span className="text-2xl">💻</span>
               <span className="font-medium">GitHub</span>
             </a>
 
             {/* LinkedIn Button */}
             <a href="https://www.linkedin.com/in/cohen-reiland" target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+              className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
               <span className="text-2xl">🔗</span>
               <span className="font-medium">LinkedIn</span>
             </a>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
       </section>
 
       <div className="mt-16 text-gray-500 dark:text-gray-400">
         <p>© {new Date().getFullYear()} Cohen Reiland. Built with Next.js and Tailwind CSS.</p>
-          </div>
+      </div>
     </div>
   );
 }
