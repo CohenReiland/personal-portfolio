@@ -2,11 +2,11 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-<div className="min-h-screen bg-white dark:bg-gray-900 transition-colors pt-16 md:pt-0 md:pl-24">
+<div className="min-h-screen bg-stone-100 dark:bg-zinc-900 transition-colors pt-16 md:pt-0 md:pl-24">
       <Navbar />
 
       {/* Main Section With Information */}
-      <section className="min-h-screen flex items-center justify-center px-6">
+      <section className="min-h-screen flex items-center justify-center px-6 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Hi, I'm <span className="text-blue-600 dark:text-blue-400">Cohen Reiland</span>
@@ -21,7 +21,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen flex items-center justify-center px-6 py-20">
+      <section id="about" className="min-h-screen flex items-center justify-center px-6 py-20 bg-stone-200 dark:bg-zinc-900">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             About Me
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="skills" className="min-h-screen flex items-center justify-center px-6 py-20 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Skills
@@ -114,13 +114,13 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20">
+      <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20 bg-stone-200 dark:bg-zinc-900">
         <div className="max-w-4xl mx-auto w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Projects
           </h2>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-12 rounded-lg text-center">
+          <div className="bg-gray-50 dark:bg-zinc-800 p-12 rounded-lg text-center">
             <div className="text-6xl mb-6">🚧</div>
             <div className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
               Projects Coming Soon!
@@ -155,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id ="contact" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gray-50 dark:bg-gray-800">
+      <section id ="contact" className="min-h-screen flex items-center justify-center px-6 py-20 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto w-full text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12">
             Contact Me
