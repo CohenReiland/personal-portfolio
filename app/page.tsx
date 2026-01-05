@@ -19,6 +19,9 @@ export default function Home() {
           </p>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
+        <div className="absolute bottom-10 text-4xl font-bold animate-bounce text-zinc-500/80 dark:text-zinc-400/80">
+          ↓
+        </div>
       </section>
 
       {/* About Section */}
