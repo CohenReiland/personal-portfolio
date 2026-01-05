@@ -73,7 +73,7 @@ export default function Navbar() {
                         <button
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "home"
-                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                ? "bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 scale-110"
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="Home"
                         >
@@ -82,7 +82,7 @@ export default function Navbar() {
                         </button>
                         <button onClick={() => scrollToSection('about')}
                             className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "about"
-                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                ? "bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 scale-110"
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="About"
                         >
@@ -91,7 +91,7 @@ export default function Navbar() {
                         </button>
                         <button onClick={() => scrollToSection('skills')}
                             className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "skills"
-                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                ? "bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 scale-110"
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="Skills"
                         >
@@ -100,7 +100,7 @@ export default function Navbar() {
                         </button>
                         <button onClick={() => scrollToSection('projects')}
                             className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "projects"
-                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                ? "bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 scale-110"
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="Projects"
                         >
@@ -109,7 +109,7 @@ export default function Navbar() {
                         </button>
                         <button onClick={() => scrollToSection('contact')}
                             className={`group flex flex-col items-center gap-1 transition-all duration-200 rounded-lg p-2 ${activeSection === "contact"
-                                ? "bg-blue-100 dark:bg-blue-900 scale-110"
+                                ? "bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 scale-110"
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="Contact"
                         >
