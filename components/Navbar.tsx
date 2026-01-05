@@ -19,7 +19,17 @@ export default function Navbar() {
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id)
-        element?.scrollIntoView({ behavior: "smooth" })
+        if (!element) return
+
+        const rect = element.getBoundingClientRect()
+        const elementTop = rect.top + window.scrollY
+        const elementHeight = rect.height
+        const viewportHeight = window.innerHeight
+
+        const scrollPosition = elementTop - viewportHeight / 2 + elementHeight / 2
+
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
+
         setMobileMenuOpen(false)
     }
 
