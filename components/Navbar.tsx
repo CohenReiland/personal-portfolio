@@ -34,10 +34,6 @@ export default function Navbar() {
             >
                 {/*Navbar Icons and Links*/}
                 <div className="h-full px-4 py-8 flex flex-col items-center justify-between">
-                    <div className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                        CR
-                    </div>
-
                     <div className="flex flex-col items-center gap-8 flex-1 justify-center">
                         <button
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -93,19 +89,7 @@ export default function Navbar() {
                 : 'bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm'
                 }`}>
                 <div className="flex items-center justify-between px-6 py-4">
-                    <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                        CR
-                    </div>
-
                     <div className="flex items-center gap-4">
-                        {/* Theme Toggle Button */}
-                        <button
-                            onClick={toggleTheme}
-                            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-                        >
-                            <span className="text-lg">{theme === 'dark' ? '☀️' : '🌙'}</span>
-                        </button>
-
                         {/* Hambergur Menu */}
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -120,6 +104,13 @@ export default function Navbar() {
                                 <span className={`block h-0.5 w-full bg-current transform transition-transform ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
                                     }`}></span>
                             </div>
+                        </button>
+                        {/* Theme Toggle Button */}
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                        >
+                            <span className="text-lg">{theme === 'dark' ? '☀️' : '🌙'}</span>
                         </button>
                     </div>
                 </div>
