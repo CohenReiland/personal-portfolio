@@ -22,7 +22,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative px-6 py-24 bg-stone-200 dark:bg-zinc-900">
+      <section id="about" className="relative px-6 pt-24 pb-60 bg-stone-200 dark:bg-zinc-900">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             About Me
@@ -40,7 +40,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="relative px-6 py-24 bg-stone-100 dark:bg-zinc-800">
+      <section id="skills" className="relative px-6 pt-24 pb-60 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Skills
@@ -118,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="relative px-6 py-24 bg-stone-200 dark:bg-zinc-900">
+      <section id="projects" className="relative px-6 pt-24 pb-60 bg-stone-200 dark:bg-zinc-900">
         <div className="max-w-4xl mx-auto w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Projects
@@ -160,7 +160,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative px-6 py-24 bg-stone-100 dark:bg-zinc-800">
+      <section id="contact" className="relative px-6 pt-24 pb-60 bg-stone-100 dark:bg-zinc-800">
         <div className="max-w-4xl mx-auto w-full text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12">
             Contact Me
@@ -194,7 +194,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
+        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-100 dark:to-zinc-900" />
       </section>
 
       <div className="mt-16 text-gray-500 dark:text-gray-400">
