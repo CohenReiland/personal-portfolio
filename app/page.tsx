@@ -45,7 +45,7 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {/* Programming Skills */}
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg">
+            <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Languages
               </h3>
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
 
             {/* Frameworks */}
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg">
+            <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Frameworks
               </h3>
@@ -78,7 +78,7 @@ export default function Home() {
             </div>
 
             {/* Concepts */}
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg">
+            <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Concepts
               </h3>
@@ -96,7 +96,7 @@ export default function Home() {
             </div>
 
             {/* Current Learning */}
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg">
+            <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Current Learning
               </h3>
@@ -169,21 +169,21 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             {/* Email Button */}
             <a href="mailto:cohen200521@gmail.com" 
-            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
               <span className="text-2xl">📧</span>
               <span className="font-medium">Email</span>
             </a>
 
             {/* GitHub Button */}
             <a href="https://github.com/CohenReiland" target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
               <span className="text-2xl">💻</span>
               <span className="font-medium">GitHub</span>
             </a>
 
             {/* LinkedIn Button */}
             <a href="https://www.linkedin.com/in/cohen-reiland" target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
+            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
               <span className="text-2xl">🔗</span>
               <span className="font-medium">LinkedIn</span>
             </a>

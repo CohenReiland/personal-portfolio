@@ -28,7 +28,7 @@ export default function Navbar() {
             {/* Desktop Section */}
             <nav
                 className={`hidden md:flex fixed left-0 top-0 h-full z-50 transition-all duration-300 ${scrolled
-                    ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg'
+                    ? 'bg-stone-100/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-lg'
                     : 'bg-transparent'
                     }`}
             >
@@ -85,8 +85,8 @@ export default function Navbar() {
 
             {/* Mobile Section */}
             <div className={`md:hidden fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
-                ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
-                : 'bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm'
+                ? 'bg-stone-100/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-lg'
+                : 'bg-stone-100/50 dark:bg-zinc-900/50 backdrop-blur-sm'
                 }`}>
                 <div className="flex items-center justify-between px-6 py-4">
                     <div className="flex items-center gap-4">
@@ -125,7 +125,7 @@ export default function Navbar() {
             )}
 
             {/* Mobile Menu */}
-            <div className={`md:hidden fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-900 shadow-2xl z-50 transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            <div className={`md:hidden fixed top-0 right-0 h-full w-64 bg-stone-100 dark:bg-zinc-900 shadow-2xl z-50 transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}>
                 <div className="p-6 flex flex-col gap-6 mt-16">
                     <button onClick={() => {
