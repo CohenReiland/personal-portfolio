@@ -1,6 +1,20 @@
+'use client';
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, []);
+
   return (
     <div className="min-h-screen bg-stone-100 dark:bg-zinc-900 transition-colors pt-16 md:pt-0 md:pl-24">
       <Navbar />
@@ -19,9 +33,11 @@ export default function Home() {
           </p>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
-        <div className="absolute bottom-10 text-4xl font-bold animate-bounce text-zinc-500/80 dark:text-zinc-400/80">
-          ↓
-        </div>
+        {!scrolled && (
+          <div className="absolute bottom-10 text-4xl font-bold animate-bounce text-zinc-500/80 dark:text-zinc-400/80">
+            ↓
+          </div>
+        )}
       </section>
 
       {/* About Section */}
