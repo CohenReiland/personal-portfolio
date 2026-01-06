@@ -19,7 +19,7 @@ export default function HeroWatch({ imageSrc, onUp, onDown, }: HeroWatchProps) {
                    bg-gradient-to-b from-gray-600 to-gray-700
                    border border-gray-500
                    shadow-lg
-                   active:translate-x-[-2px]"
+                   active:translate-x-[2px] active:translate-y-[1px]"
             />
 
             {/* Down Button */}
@@ -32,7 +32,7 @@ export default function HeroWatch({ imageSrc, onUp, onDown, }: HeroWatchProps) {
                    bg-gradient-to-b from-gray-600 to-gray-700
                    border border-gray-500
                    shadow-lg
-                   active:translate-x-[-2px]"
+                   active:translate-x-[2px] active:translate-y-[-1px]"
             />
             {/* Watch Case */}
             <div className="relative w-[300px] h-[300px] rounded-full
