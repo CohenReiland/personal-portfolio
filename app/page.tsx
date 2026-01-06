@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
+import HeroWatch from "@/components/watch/HeroWatch";
 
 export default function Home() {
 
@@ -21,17 +22,30 @@ export default function Home() {
 
       {/* Main Section With Information */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-6 bg-stone-100 dark:bg-zinc-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Cohen Reiland</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-            Computer Science Student | Runner | Gamer
-          </p>
-          <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            Sophomore at NDSU exploring the intersection of technology, endurance, and creativity.
-          </p>
+        <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+          {/* Watch Half */}
+          <div className="flex justify-center md:justify-end mb-4 md:mb-0">
+            <HeroWatch imageSrc="/profile-photo.jpg" title="Cohen Reiland" description="Computer Science Student at NDSU" />
+          </div>
+          {/* Personal Half */}
+          <div className="text-center md:text-left">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+              Cohen <span className="text-blue-600 dark:text-blue-400">Reiland</span>
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+              Computer Science Student @ NDSU
+            </p>
+            <p className="text-lg text-gray-500 dark:text-gray-400 max-w-md">
+              Building clean, functional interfaces with React, TypeScript, and modern web tools.
+            </p>
+            <div className="mt-6 flex items-center justify-center md:justify-start gap-2 text-gray-500 dark:text-gray-400">
+              <span>📍</span>
+              <span>Fargo, ND</span>
+            </div>
+          </div>
         </div>
+
+
         <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
         {!scrolled && (
           <div className="absolute bottom-10 text-4xl font-bold animate-bounce text-zinc-500/80 dark:text-zinc-400/80">
