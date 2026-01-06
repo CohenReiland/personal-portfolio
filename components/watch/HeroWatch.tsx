@@ -15,7 +15,7 @@ export default function HeroWatch({ imageSrc }: HeroWatchProps) {
                 <img
                     src={imageSrc}
                     alt="Profile Photo"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[50%_15%]"
                 />
 
                 <div className="absolute inset-0 bg-black/10" />
