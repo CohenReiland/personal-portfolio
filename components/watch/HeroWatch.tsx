@@ -9,6 +9,20 @@ export default function HeroWatch({ imageSrc, onUp, onDown, }: HeroWatchProps) {
     return (
         <div className="relative w-[340px] h-[340px] flex items-center justify-center">
 
+            {/* Top and Bottom Bands */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2
+                  w-[140px] h-[90px]
+                  bg-gradient-to-b from-gray-700 to-gray-900
+                  rounded-b-xl
+                  shadow-md z-0"
+            />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2
+                  w-[140px] h-[90px]
+                  bg-gradient-to-t from-gray-700 to-gray-900
+                  rounded-t-xl
+                  shadow-md z-0"
+            />
+
             {/* Up Button */}
             <button
                 onClick={onUp}
