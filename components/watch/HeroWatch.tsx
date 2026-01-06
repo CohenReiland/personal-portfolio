@@ -1,11 +1,24 @@
+import { useState } from "react";
+import ProfileScreen from "@/components/watch/ProfileScreen";
+import GraduationScreen from "@/components/watch/GraduationScreen";
 
 type HeroWatchProps = {
     imageSrc: string;
-    onUp?: () => void;
-    onDown?: () => void;
 };
 
-export default function HeroWatch({ imageSrc, onUp, onDown, }: HeroWatchProps) {
+export default function HeroWatch({ imageSrc, }: HeroWatchProps) {
+
+    const [screenIndex, setScreenIndex] = useState(0);
+    const totalScreens = 2;
+
+    const handleUp = () => {
+        setScreenIndex((prev) => prev === 0 ? totalScreens - 1 : prev - 1);
+    };
+
+    const handleDown = () => {
+        setScreenIndex((prev) => prev === totalScreens - 1 ? 0 : prev + 1);
+    };
+
     return (
         <div className="relative w-[340px] h-[340px] flex items-center justify-center">
 
@@ -25,7 +38,7 @@ export default function HeroWatch({ imageSrc, onUp, onDown, }: HeroWatchProps) {
 
             {/* Up Button */}
             <button
-                onClick={onUp}
+                onClick={handleUp}
                 type="button"
                 aria-label="Scroll Up"
                 className="absolute left-[8px] top-[97px] rotate-[15deg]
@@ -37,7 +50,7 @@ export default function HeroWatch({ imageSrc, onUp, onDown, }: HeroWatchProps) {
 
             {/* Down Button */}
             <button
-                onClick={onDown}
+                onClick={handleDown}
                 type="button"
                 aria-label="Scroll Down"
                 className="absolute left-[10px] top-[200px] rotate-[-20deg]
@@ -65,11 +78,13 @@ export default function HeroWatch({ imageSrc, onUp, onDown, }: HeroWatchProps) {
 
                     {/* Watch Screen */}
                     <div className="absolute inset-8 rounded-full overflow-hidden bg-neutral-100 dark:bg-gray-900">
-                        <img
-                            src={imageSrc}
-                            alt="Profile Photo"
-                            className="w-full h-full object-cover object-[50%_15%]"
-                        />
+                        {screenIndex === 0 && (
+                            <ProfileScreen imageSrc={imageSrc} />
+                        )}
+
+                        {screenIndex === 1 && (
+                            <GraduationScreen />
+                        )}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
                     </div>
                 </div>

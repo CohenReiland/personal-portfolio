@@ -25,9 +25,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
           {/* Watch Half */}
           <div className="flex justify-center md:justify-end mb-4 md:mb-0">
-            <HeroWatch imageSrc="/profile.jpg"
-              onUp={() => console.log("Up pressed")}
-              onDown={() => console.log("Down pressed")} />
+            <HeroWatch imageSrc="/profile.jpg" />
           </div>
           {/* Personal Half */}
           <div className="text-center md:text-left">
