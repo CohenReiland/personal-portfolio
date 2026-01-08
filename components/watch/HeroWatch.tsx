@@ -1,7 +1,18 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import ProfileScreen from "@/components/watch/ProfileScreen";
 import GraduationScreen from "@/components/watch/GraduationScreen";
 
+const screens = [
+    {
+        id: "profile",
+        component: (props: any) => <ProfileScreen {...props} />,
+    },
+    {
+        id: "graduation",
+        component: () => <GraduationScreen />,
+    }
+];
 type HeroWatchProps = {
     imageSrc: string;
 };
@@ -9,13 +20,16 @@ type HeroWatchProps = {
 export default function HeroWatch({ imageSrc, }: HeroWatchProps) {
 
     const [screenIndex, setScreenIndex] = useState(0);
-    const totalScreens = 2;
+    const [direction, setDirection] = useState<1 | -1>(1);
+    const totalScreens = screens.length;
 
     const handleUp = () => {
+        setDirection(-1);
         setScreenIndex((prev) => prev === 0 ? totalScreens - 1 : prev - 1);
     };
 
     const handleDown = () => {
+        setDirection(1);
         setScreenIndex((prev) => prev === totalScreens - 1 ? 0 : prev + 1);
     };
 
@@ -78,14 +92,23 @@ export default function HeroWatch({ imageSrc, }: HeroWatchProps) {
 
                     {/* Watch Screen */}
                     <div className="absolute inset-8 rounded-full overflow-hidden bg-neutral-100 dark:bg-gray-900">
-                        {screenIndex === 0 && (
-                            <ProfileScreen imageSrc={imageSrc} />
-                        )}
-
-                        {screenIndex === 1 && (
-                            <GraduationScreen />
-                        )}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
+                        <AnimatePresence initial={false} custom={direction}>
+                            <motion.div
+                                key={screens[screenIndex].id}
+                                custom={direction}
+                                initial={{ y: direction === 1 ? "100%" : "-100%", opacity: 0 }}
+                                animate={{ y: "0%", opacity: 1 }}
+                                exit={{ y: direction === 1 ? "-100%" : "100%", opacity: 0 }}
+                                transition={{
+                                    duration: 0.35,
+                                    ease: "easeInOut",
+                                }}
+                                className="absolute inset-0"
+                            >
+                                {screens[screenIndex].component({ imageSrc })}
+                            </motion.div>
+                        </AnimatePresence>
+                        < div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
                     </div>
                 </div>
             </div>
