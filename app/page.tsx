@@ -1,4 +1,5 @@
 'use client';
+import { MapPin, Mail, Github, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroWatch from "@/components/watch/HeroWatch";
@@ -39,7 +40,7 @@ export default function Home() {
               Building clean, functional interfaces with React, TypeScript, and modern web tools.
             </p>
             <div className="mt-6 flex items-center justify-center md:justify-start gap-2 text-gray-500 dark:text-gray-400">
-              <span>📍</span>
+              <MapPin size={18} className="text-gray-500 dark:text-gray-400" />
               <span>Fargo, ND</span>
             </div>
           </div>
@@ -208,21 +209,21 @@ export default function Home() {
             {/* Email Button */}
             <a href="mailto:cohen200521@gmail.com"
               className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
-              <span className="text-2xl">📧</span>
+              <Mail size={22} />
               <span className="font-medium">Email</span>
             </a>
 
             {/* GitHub Button */}
             <a href="https://github.com/CohenReiland" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
-              <span className="text-2xl">💻</span>
+              <Github size={22} />
               <span className="font-medium">GitHub</span>
             </a>
 
             {/* LinkedIn Button */}
             <a href="https://www.linkedin.com/in/cohen-reiland" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
-              <span className="text-2xl">🔗</span>
+              <Linkedin size={22} />
               <span className="font-medium">LinkedIn</span>
             </a>
           </div>

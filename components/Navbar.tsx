@@ -1,5 +1,6 @@
 'use client'
 
+import { LayoutDashboard, UserRound, Code2, FolderKanban, Send, SunMedium, MoonStar } from "lucide-react"
 import { useTheme } from "./ThemeProvider"
 import { useState, useEffect } from "react"
 
@@ -77,7 +78,7 @@ export default function Navbar() {
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="Home"
                         >
-                            <span className="text-2xl">🏠</span>
+                            <LayoutDashboard size={22} />
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">Home</span>
                         </button>
                         <button onClick={() => scrollToSection('about')}
@@ -86,7 +87,7 @@ export default function Navbar() {
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="About"
                         >
-                            <span className="text-2xl">👤</span>
+                            <UserRound size={22} />
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">About</span>
                         </button>
                         <button onClick={() => scrollToSection('skills')}
@@ -95,7 +96,7 @@ export default function Navbar() {
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="Skills"
                         >
-                            <span className="text-2xl">⚡</span>
+                            <Code2 size={22} />
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">Skills</span>
                         </button>
                         <button onClick={() => scrollToSection('projects')}
@@ -104,7 +105,7 @@ export default function Navbar() {
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="Projects"
                         >
-                            <span className="text-2xl">💼</span>
+                            <FolderKanban size={22} />
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">Projects</span>
                         </button>
                         <button onClick={() => scrollToSection('contact')}
@@ -113,7 +114,7 @@ export default function Navbar() {
                                 : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                 }`} title="Contact"
                         >
-                            <span className="text-2xl">📧</span>
+                            <Send size={22} />
                             <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">Contact</span>
                         </button>
                     </div>
@@ -123,7 +124,7 @@ export default function Navbar() {
                         className="p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                         title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                     >
-                        <span className="text-xl">{theme === 'dark' ? '☀️' : '🌙'}</span>
+                        <span className="text-xl">{theme === 'dark' ? <SunMedium size={18} /> : <MoonStar size={18} className="text-gray-500 dark:text-gray-400"/>}</span>
                     </button>
                 </div>
             </nav>
@@ -155,7 +156,7 @@ export default function Navbar() {
                             onClick={toggleTheme}
                             className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                         >
-                            <span className="text-lg">{theme === 'dark' ? '☀️' : '🌙'}</span>
+                            <span className="text-lg">{theme === 'dark' ? <SunMedium size={18} /> : <MoonStar size={18} className="text-gray-500 dark:text-gray-400" />}</span>
                         </button>
                     </div>
                 </div>
@@ -182,7 +183,7 @@ export default function Navbar() {
                             : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                             }`}
                     >
-                        <span className="text-2xl">🏠</span>
+                        <LayoutDashboard size={22} />
                         <span className="text-lg font-medium">Home</span>
                     </button>
                     <button onClick={() => scrollToSection('about')}
@@ -191,7 +192,7 @@ export default function Navbar() {
                             : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                             }`}
                     >
-                        <span className="text-2xl">👤</span>
+                        <UserRound size={22} />
                         <span className="text-lg font-medium">About</span>
                     </button>
                     <button onClick={() => scrollToSection('skills')}
@@ -200,7 +201,7 @@ export default function Navbar() {
                             : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                             }`}
                     >
-                        <span className="text-2xl">⚡</span>
+                        <Code2 size={22} />
                         <span className="text-lg font-medium">Skills</span>
                     </button>
                     <button onClick={() => scrollToSection('projects')}
@@ -209,7 +210,7 @@ export default function Navbar() {
                             : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                             }`}
                     >
-                        <span className="text-2xl">💼</span>
+                        <FolderKanban size={22} />
                         <span className="text-lg font-medium">Projects</span>
                     </button>
                     <button onClick={() => scrollToSection('contact')}
@@ -218,7 +219,7 @@ export default function Navbar() {
                             : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                             }`}
                     >
-                        <span className="text-xl">📧</span>
+                        <Send size={22} />
                         <span className="text-lg font-medium">Contact</span>
                     </button>
                 </div>
