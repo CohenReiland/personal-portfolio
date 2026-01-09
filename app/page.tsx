@@ -1,5 +1,5 @@
 'use client';
-import { MapPin, Mail, Github, Linkedin } from "lucide-react";
+import { MapPin, Mail, Github, Linkedin, Check } from "lucide-react";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroWatch from "@/components/watch/HeroWatch";
@@ -7,6 +7,15 @@ import HeroWatch from "@/components/watch/HeroWatch";
 export default function Home() {
 
   const [scrolled, setScrolled] = useState(false);
+  const EMAIL = "cohen200521@gmail.com";
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${EMAIL}`;
+    navigator.clipboard.writeText(EMAIL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -205,13 +214,13 @@ export default function Home() {
             ask a question, or just say hi, feel free to reach out!
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
             {/* Email Button */}
-            <a href="mailto:cohen200521@gmail.com"
+            <button onClick={handleEmailClick}
               className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-zinc-900 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto justify-center">
-              <Mail size={22} />
-              <span className="font-medium">Email</span>
-            </a>
+              {copied ? <Check size={22} /> : <Mail size={22} />}
+              <span>{copied ? "Email Copied" : "Email"}</span>
+            </button>
 
             {/* GitHub Button */}
             <a href="https://github.com/CohenReiland" target="_blank" rel="noopener noreferrer"
