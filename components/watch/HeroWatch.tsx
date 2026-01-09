@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import ProfileScreen from "@/components/watch/ProfileScreen";
 import GraduationScreen from "@/components/watch/GraduationScreen";
+import StatsScreen from "@/components/watch/StatsScreen";
 
 const screens = [
     {
@@ -11,6 +12,10 @@ const screens = [
     {
         id: "graduation",
         component: () => <GraduationScreen />,
+    },
+    {
+        id: "stats",
+        component: () => <StatsScreen />,
     }
 ];
 type HeroWatchProps = {
