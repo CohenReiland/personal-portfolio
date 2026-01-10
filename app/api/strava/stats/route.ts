@@ -19,3 +19,50 @@ async function getAccessToken() {
 
     return response.json();
 }
+
+async function getAthelete(accessToken: string) {
+    const response = await fetch("https://www.strava.com/api/v3/athlete", {
+        headers: {
+            Authorization: `Bearer ${accessToken}`,
+        },
+    });
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch athlete");
+    }
+
+    return response.json();
+}
+
+async function getAtheleteStats(accessToken: string, athleteId: number) {
+    const response = await fetch(`https://www.strava.com/api/v3/athletes/${athleteId}/stats`, {
+        headers: {
+            Authorization: `Bearer ${accessToken}`,
+        },
+    });
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch athlete stats");
+    }
+
+    return response.json();
+}
+
+export async function GET() {
+    try {
+        const tokenData = await getAccessToken();
+        const athlete = await getAthelete(tokenData.access_token);
+        const stats = await getAtheleteStats(tokenData.access_token, athlete.id);
+        const runningStats = stats.ytd_run_totals;
+
+        return Response.json({
+            runs: runningStats.count,
+            miles: (runningStats.distance / 1609.34).toFixed(2), // convert meters to miles
+            avgPace: (runningStats.moving_time / runningStats.distance) * 1609.34, // seconds per mile
+            longestRun: (runningStats.longest_run / 1609.34).toFixed(2), // convert meters to miles
+        });
+    } catch (error) {
+        console.error(error);
+        return Response.json({ error: "Failed to fetch Strava stats" }, { status: 500 });
+    }
+}
