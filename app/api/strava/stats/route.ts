@@ -53,13 +53,15 @@ export async function GET() {
         const tokenData = await getAccessToken();
         const athlete = await getAthelete(tokenData.access_token);
         const stats = await getAtheleteStats(tokenData.access_token, athlete.id);
-        const runningStats = stats.ytd_run_totals;
+        const runningStats = stats.all_run_totals;
+        const miles = (runningStats.distance / 1609.34); // convert meters to miles
+        const avgPaceSeconds = runningStats.moving_time / miles;
 
         return Response.json({
             runs: runningStats.count,
-            miles: (runningStats.distance / 1609.34).toFixed(2), // convert meters to miles
-            avgPace: (runningStats.moving_time / runningStats.distance) * 1609.34, // seconds per mile
-            longestRun: (runningStats.longest_run / 1609.34).toFixed(2), // convert meters to miles
+            miles: Number(miles.toFixed(2)),
+            avgPace: Math.round(avgPaceSeconds),
+            longestRun: Number((stats.biggest_distance / 1609.34).toFixed(2)), // convert meters to miles
         });
     } catch (error) {
         console.error(error);
