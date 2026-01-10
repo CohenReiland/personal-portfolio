@@ -2,8 +2,8 @@
 export default function StatsScreen() {
     return (
         <div className="w-full h-full flex flex-col items-center justify-center text-center px-4">
-            <h2 className="text-sm font-semibold tracking-wide text-neutral-700 dark:text-neutral-200">
-                Run Stats
+            <h2 className="text-m font-semibold tracking-wide text-neutral-700 dark:text-neutral-200">
+                Strava Stats
             </h2>
 
             <div className="mt-3 grid grid-cols-2 gap-3 text-xs">
