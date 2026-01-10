@@ -61,7 +61,7 @@ export async function GET() {
             runs: runningStats.count,
             miles: Number(miles.toFixed(2)),
             avgPace: Math.round(avgPaceSeconds),
-            longestRun: Number((stats.biggest_distance / 1609.34).toFixed(2)), // convert meters to miles
+            movingTime: runningStats.moving_time,
         });
     } catch (error) {
         console.error(error);
