@@ -8,15 +8,15 @@ const screens = [
     {
         id: "profile",
         component: (props: any) => <ProfileScreen {...props} />,
+    },{
+        id: "stats",
+        component: () => <StatsScreen />,
     },
     {
         id: "graduation",
         component: () => <GraduationScreen />,
-    },
-    {
-        id: "stats",
-        component: () => <StatsScreen />,
     }
+    
 ];
 type HeroWatchProps = {
     imageSrc: string;
