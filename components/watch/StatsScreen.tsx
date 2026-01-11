@@ -39,22 +39,33 @@ export default function StatsScreen() {
         );
     }
 
-    {/* Format average pace as minutes and seconds per mile */}
+    {/* Format average pace as minutes and seconds per mile */ }
     const paceMinutes = Math.floor(stats.avgPace / 60);
     const paceSeconds = Math.round(stats.avgPace % 60).toString().padStart(2, "0");
     const movingTimeHours = stats.movingTime / 3600;
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-center text-center px-4">
-            <h2 className="text-m font-semibold tracking-wide text-neutral-700 dark:text-neutral-200">
-                Strava Stats
-            </h2>
+        <div className="w-full h-full flex items-center justify-center px-4">
+            <div className="w-full rounded-3xl shadow-sm p-5 text-center">
+                <h2 className="text-[12px] font-bold tracking-widest text-neutral-500 dark:text-neutral-300">
+                    <span className="text-orange-500 dark:text-orange-500">STRAVA</span> STATS
+                </h2>
 
-            <div className="mt-3 grid grid-cols-2 gap-3 text-xs">
-                <Stat label="Miles" value={stats.miles.toFixed(1)} />
-                <Stat label="Runs" value={stats.runs.toString()} />
-                <Stat label="Avg Pace" value={`${paceMinutes}'${paceSeconds}"`} />
-                <Stat label="Moving Time" value={`${movingTimeHours.toFixed(1)} hrs`} />
+                <div className="mt-0.5">
+                    <div className="text-3xl font-extrabold text-neutral-900 dark:text-white leading-none">
+                        {stats.miles.toFixed(1)}
+                    </div>
+                    <div className="mt-1 text-[11px] tracking-widest uppercase text-neutral-500 dark:text-neutral-400">
+                        Total Miles Run
+                    </div>
+                </div>
+                <div className="my-2 h-px bg-neutral-200 dark:bg-neutral-700" />
+
+                <div className="grid grid-cols-3 gap-2">
+                    <Stat label="Runs" value={stats.runs.toString()} />
+                    <Stat label="Avg Pace" value={`${paceMinutes}'${paceSeconds}"`} />
+                    <Stat label="Time" value={`${movingTimeHours.toFixed(1)} hrs`} />
+                </div>
             </div>
         </div>
     );
@@ -63,10 +74,10 @@ export default function StatsScreen() {
 function Stat({ label, value }: { label: string; value: string }) {
     return (
         <div className="flex flex-col items-center">
-            <span className="text-lg font-bold text-neutral-900 dark:text-white">
+            <span className="text-m font-semibold text-neutral-900 dark:text-white">
                 {value}
             </span>
-            <span className="text-[10px] tracking-wide text-neutral-500 dark:text-neutral-400">
+            <span className="text-[11px] tracking-widest text-neutral-500 dark:text-neutral-300">
                 {label}
             </span>
         </div>
