@@ -168,38 +168,107 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Projects
           </h2>
+          <div className="grid md:grid-col-2 gap-8">
+            {/* Project 1 */}
+            <div className="bg-gray-50 dark:bg-zinc-800 p-6 rounded-lg flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+                  Fargo Spa & Wellness Application
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  Software Development Team Project · Aug 2025 – Dec 2025
+                </p>
 
-          <div className="bg-gray-50 dark:bg-zinc-800 p-12 rounded-lg text-center">
-            <div className="text-6xl mb-6">🚧</div>
-            <div className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Projects Coming Soon!
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  A full-stack web application built with ASP.NET Core Blazor that supports
+                  role-based access for clients, staff, and administrators. The system enables
+                  appointment booking, service management, and scheduling through secure,
+                  role-specific workflows.
+                </p>
+
+                <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-1">
+                  <li>Implemented 4 distinct user roles with role-based functionality</li>
+                  <li>Tracked 12+ Agile Scrum user stories using Microsoft Azure</li>
+                  <li>Designed system architecture using Lucidchart (use-case, activity, ERD)</li>
+                </ul>
+              </div>
+
+              <div>
+                <div className="flex gap-2 flex-wrap mb-4">
+                  <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
+                    ASP.NET Core
+                  </span>
+                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                    Blazor
+                  </span>
+                  <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">
+                    Agile / Scrum
+                  </span>
+                  <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">
+                    Azure DevOps
+                  </span>
+                </div>
+
+                <a
+                  href="https://github.com/CohenReiland/Fargo-Spa-Wellness-Application"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  View Project →
+                </a>
+              </div>
             </div>
-            <p className="text-gray-600 dark:text-gray-300 max-w-md mx-auto">
-              I'm currently working on some exciting projects. Stay tuned!
-            </p>
-          </div>
+            {/* Project 2 */}
+            <div className="bg-gray-50 dark:bg-zinc-800 p-6 rounded-lg flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+                  Online Store Management System
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  Database Systems Team Project · Nov 2025 – Dec 2025
+                </p>
 
-          {/* This is what a project card will look like when you add them later */}
-          {/* 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                Project Name
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Project description goes here. What does it do? What technologies did you use?
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
-                  React
-                </span>
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
-                  TypeScript
-                </span>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  A database-driven inventory and order management system built with PostgreSQL
+                  and JDBC. The application supports complete CRUD operations across a complex,
+                  relational schema and generates business intelligence reports from transactional data.
+                </p>
+
+                <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4 space-y-1">
+                  <li>Managed 9 interconnected tables across 8+ entity types</li>
+                  <li>Used prepared statements to prevent SQL injection vulnerabilities</li>
+                  <li>Generated revenue, inventory, and customer analytics using SQL aggregates</li>
+                </ul>
+              </div>
+
+              <div>
+                <div className="flex gap-2 flex-wrap mb-4">
+                  <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
+                    Java
+                  </span>
+                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                    PostgreSQL
+                  </span>
+                  <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">
+                    SQL / JDBC
+                  </span>
+                  <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">
+                    GitHub
+                  </span>
+                </div>
+
+                <a
+                  href="https://github.com/CohenReiland/Online-Store-Management-System"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  View Project →
+                </a>
               </div>
             </div>
           </div>
-          */}
         </div>
         <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-100 dark:to-zinc-800" />
       </section>
