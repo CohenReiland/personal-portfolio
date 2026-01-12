@@ -19,6 +19,7 @@ export default function StatsScreen() {
                 if (!res.ok) throw new Error();
                 return res.json();
             })
+            .then((data) => data.lifetime)
             .then(setStats)
             .catch(() => setError(true));
     }, []);
