@@ -3,6 +3,7 @@ import { MapPin, Mail, Github, Linkedin, Check } from "lucide-react";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroWatch from "@/components/watch/HeroWatch";
+import AboutRunStats from "@/components/about/AboutRunStats";
 
 export default function Home() {
 
@@ -77,6 +78,7 @@ export default function Home() {
               and I'm currently diving into modern software development, databases, and programming languages.
               I love building things and solving problems.
             </p>
+            <AboutRunStats />
           </div>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-100 dark:to-zinc-800" />
