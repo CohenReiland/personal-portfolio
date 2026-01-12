@@ -8,9 +8,9 @@ export default function ProfileScreen({ imageSrc }: { imageSrc: string }) {
                 className="w-full h-full object-cover object-[50%_15%]"
             />
             <div className="absolute inset-0
-                      bg-gradient-to-br
-                      from-white/20 to-transparent
-                      dark:from-white/10" />
+                      bg-gradient-to-b
+                      from-black/20 to-transparent
+                      dark:from-black/10" />
         </>
     );
 }
