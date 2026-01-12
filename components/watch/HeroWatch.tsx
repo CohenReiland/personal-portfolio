@@ -8,7 +8,7 @@ const screens = [
     {
         id: "profile",
         component: (props: any) => <ProfileScreen {...props} />,
-    }, 
+    },
     {
         id: "stats",
         component: () => <StatsScreen />,

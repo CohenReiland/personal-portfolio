@@ -64,7 +64,7 @@ export default function StatsScreen() {
                 <div className="grid grid-cols-3 gap-2">
                     <Stat label="Runs" value={stats.runs.toString()} />
                     <Stat label="Avg Pace" value={`${paceMinutes}'${paceSeconds}"`} />
-                    <Stat label="Time" value={`${movingTimeHours.toFixed(1)} hrs`} />
+                    <Stat label="Total Hours" value={`${movingTimeHours.toFixed(1)}`} />
                 </div>
             </div>
         </div>
