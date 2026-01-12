@@ -44,10 +44,10 @@ export default function Home() {
               Cohen <span className="text-blue-600 dark:text-blue-400">Reiland</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-              Computer Science Student @ NDSU
+              Computer Science Sophomore @ NDSU | Software Engineer
             </p>
             <p className="text-lg text-gray-500 dark:text-gray-400 max-w-md">
-              Building clean, functional interfaces with React, TypeScript, and modern web tools.
+              Motivated computer science student with a strong interest in software engineering and artificial intelligence.
             </p>
             <div className="mt-6 flex items-center justify-center md:justify-start gap-2 text-gray-500 dark:text-gray-400">
               <MapPin size={18} className="text-gray-500 dark:text-gray-400" />
@@ -74,9 +74,9 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              I'm a sophomore at NDSU studying Computer Science. I've learned Java fundamentals, data structures,
-              and I'm currently diving into modern software development, databases, and programming languages.
-              I love building things and solving problems.
+              I'm a sophomore at NDSU studying Computer Science with a strong passion for software engineering and artificial intelligence.
+              I enjoy challenging problems that require critical thinking and thorough design.
+              I enjoy continuously improving my technical skills through coursework and hands-on projects. I am always excited to learn, grow, and contribute.
             </p>
             <AboutRunStats />
           </div>
@@ -250,8 +250,8 @@ export default function Home() {
           </h2>
 
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-            I'm always open to new opportunities and connections. Whether you want to discuss a project,
-            ask a question, or just say hi, feel free to reach out!
+            I'm always excited to learn, grow, and contribute.
+            Whether you want to discuss a project, collaborate on something new, or just connect, feel free to reach out!
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
