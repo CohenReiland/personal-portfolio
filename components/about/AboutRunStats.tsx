@@ -10,6 +10,7 @@ type ytdRunStats = {
 
 export default function AboutRunStats() {
     const [stats, setStats] = useState<ytdRunStats | null>(null);
+    const currentYear = new Date().getFullYear();
 
     useEffect(() => {
         fetch ("/api/strava/stats")
@@ -28,9 +29,9 @@ export default function AboutRunStats() {
     const hours = (stats.elapsedTime / 3600).toFixed(1);
 
     return (
-        <div className="mt-10 flex flex-col items-center text-sm text-gray-500 dark:text-gray-400">
-            <span className="text-[11px] tracking-widest uppercase mb-3">
-                YTD Running Stats
+        <div className="mt-8 flex flex-col items-center text-sm text-gray-500 dark:text-gray-400">
+            <span className="text-[13px] tracking-widest text-gray-500 dark:text-gray-300 mb-3">
+                {currentYear} Running Stats
             </span>
             <div className="flex gap-10">
                 <Stat label="Runs" value={stats.count.toString()} />
@@ -44,7 +45,7 @@ export default function AboutRunStats() {
 function Stat({ label, value }: { label: string; value: string }) {
     return (
         <div className="flex flex-col items-center">
-            <span className="text-base font-medium text-gray-700 dark:text-gray-200">
+            <span className="text-base font-medium text-gray-700 dark:text-gray-300">
                 {value}
             </span>
             <span className="text-[10px] uppercase tracking-wide">
