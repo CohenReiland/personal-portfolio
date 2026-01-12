@@ -58,10 +58,17 @@ export async function GET() {
         const avgPaceSeconds = runningStats.moving_time / miles;
 
         return Response.json({
-            runs: runningStats.count,
-            miles: Number(miles.toFixed(2)),
-            avgPace: Math.round(avgPaceSeconds),
-            movingTime: runningStats.moving_time,
+            lifetime: {
+                runs: runningStats.count,
+                miles: Number(miles.toFixed(2)),
+                avgPace: Math.round(avgPaceSeconds),
+                movingTime: runningStats.moving_time,
+            },
+            ytd: {
+                count: stats.ytd_run_totals.count,
+                distance: stats.ytd_run_totals.distance,
+                elapsedTime: stats.ytd_run_totals.elapsed_time,
+            },
         });
     } catch (error) {
         console.error(error);
