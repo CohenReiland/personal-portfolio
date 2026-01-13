@@ -23,8 +23,6 @@ export async function GET(req: Request) {
 
     const data = await response.json();
 
-    console.log("Strava Token Response:", data);
-
     return NextResponse.json({
         success: true,
         message: "Check server log for refresh token",
