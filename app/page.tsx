@@ -49,7 +49,7 @@ export default function Home() {
             <p className="text-lg text-gray-500 dark:text-gray-400 max-w-md mx-auto text-center md:text-left">
               Motivated computer science student with a strong interest in software engineering and artificial intelligence.
             </p>
-            <div className="mt-6 flex items-center justify-center md:justify-start gap-2 text-gray-500 dark:text-gray-400">
+            <div className="mt-6 flex items-center justify-center md:justify-start gap-2 max-w-md mx-auto text-center md:text-left text-gray-500 dark:text-gray-400">
               <MapPin size={18} className="text-gray-500 dark:text-gray-400" />
               <span>Fargo, ND</span>
             </div>
