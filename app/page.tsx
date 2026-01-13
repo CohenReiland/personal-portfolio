@@ -74,9 +74,8 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              I'm a sophomore at NDSU studying Computer Science with a strong passion for software engineering and artificial intelligence.
-              I enjoy challenging problems that require critical thinking and thorough design.
-              I enjoy continuously improving my technical skills through coursework and hands-on projects. I am always excited to learn, grow, and contribute.
+              I'm a Computer Science sophomore at NDSU with a passion for software engineering and AI.
+              I enjoy building projects that challenge my problem-solving skills and continuously learning new technologies.
             </p>
             <AboutRunStats />
           </div>
@@ -192,7 +191,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Projects
           </h2>
-          <div className="grid md:grid-col-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Project 1 */}
             <div className="bg-gray-50 dark:bg-zinc-800 p-6 rounded-lg overflow-hidden">
               <a
