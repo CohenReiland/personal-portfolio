@@ -39,6 +39,7 @@ async function getAtheleteStats(accessToken: string, athleteId: number) {
         headers: {
             Authorization: `Bearer ${accessToken}`,
         },
+        next: { revalidate: 3600 },
     });
 
     if (!response.ok) {
