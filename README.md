@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
+
+A modern, responsive portfolio website built with Next.js and React, featuring dark/light theme support, Strava API integration, and smooth animations.
+
+## Features
+
+- **Theme Toggle**: Persistent dark and light mode with smooth color transitions
+- **Strava Integration**: Running statistics fetched from Strava API with real-time data
+- **Responsive Design**: Fully responsive layout optimized for mobile and desktop viewing
+- **Custom Components**: Animated smartwatch display, running stats dashboard, and gradient section transitions
+- **Project Showcase**: Featured projects with live links, screenshots, and technology tags
+- **Contact Integration**: Direct email with copy-to-clipboard, GitHub, and LinkedIn links
+
+## Demo
+
+[Live Website](https://cohen-reiland.vercel.app/)
+
+## Tech Stack
+
+- Next.js 16.1.1
+- React 19.2.3
+- TypeScript 5.9.3
+- Tailwind CSS 4.1.18
+- Framer Motion 12.24.10
+- Lucide React (icons)
+- Strava API
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 20.9.0 or higher
+- npm, yarn, pnpm, or bun
+- Strava API credentials (optional for running stats)
 
+### Setup
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
+3. Create a `.env.local` file for Strava integration (optional):
+```env
+STRAVA_CLIENT_ID=your_client_id
+STRAVA_CLIENT_SECRET=your_client_secret
+STRAVA_REFRESH_TOKEN=your_refresh_token
+```
+4. Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Build for Production
+
+```bash
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate through sections with smooth scrolling:
+- **Hero**: Introduction with animated smartwatch component
+- **About**: Personal background with live Strava running statistics
+- **Skills**: Programming languages, frameworks, and current learning
+- **Projects**: Featured projects with GitHub links and technology stacks
+- **Contact**: Direct links to email, GitHub, and LinkedIn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Theme preference persists across sessions. Running stats refresh hourly via Strava API.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/
+│   ├── api/strava/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── about/
+│   ├── watch/
+│   ├── Navbar.tsx
+│   └── ThemeProvider.tsx
+└── public/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deployed on Vercel at [cohen-reiland.vercel.app](https://cohen-reiland.vercel.app/)
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT License - See [LICENSE](LICENSE) for details
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+
+Cohen Reiland  
+Computer Science Sophomore  
+North Dakota State University
