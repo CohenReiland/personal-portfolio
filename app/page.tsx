@@ -154,10 +154,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Current Learning */}
+            {/* Currently Learning */}
             <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Current Learning
+                Currently Learning
               </h3>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
