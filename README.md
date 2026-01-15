@@ -15,6 +15,8 @@ A modern, responsive portfolio website built with Next.js and React, featuring d
 
 [![Live Website](public/website-thumbnail.png)](https://cohen-reiland.vercel.app/)
 
+*Click the image above to go to the website*
+
 ## Tech Stack
 
 - Next.js 16.1.1
