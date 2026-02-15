@@ -51,7 +51,7 @@ export default function Home() {
             </p>
             <div className="mt-6 flex items-center justify-center md:justify-start gap-2 text-gray-500 dark:text-gray-400">
               <MapPin size={18} className="text-gray-500 dark:text-gray-400" />
-              <span>Fargo, ND</span>
+              <span>Alexandria, MN</span>
             </div>
           </div>
         </div>
