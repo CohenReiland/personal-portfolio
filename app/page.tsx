@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroWatch from "@/components/watch/HeroWatch";
 import AboutRunStats from "@/components/about/AboutRunStats";
+import SkillsSection from "@/components/skills/SkillsSection";
 
 export default function Home() {
 
@@ -84,106 +85,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="relative px-6 pt-24 pb-60 bg-stone-100 dark:bg-zinc-800">
-        <div className="max-w-4xl mx-auto w-full">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Skills
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {/* Programming Languages */}
-            <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Languages
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-                  Java
-                </span>
-                <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-                  C#
-                </span>
-                <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-                  SQL
-                </span>
-                <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-                  HTML/CSS
-                </span>
-              </div>
-            </div>
-
-            {/* Frameworks */}
-            <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Frameworks & Tools
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">
-                  ASP.NET Core
-                </span>
-                <span className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">
-                  Blazor
-                </span>
-                <span className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">
-                  GitHub
-                </span>
-                <span className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">
-                  Microsoft Azure
-                </span>
-              </div>
-            </div>
-
-            {/* Concepts */}
-            <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Concepts
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">
-                  Data Structures
-                </span>
-                <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">
-                  Algorithms
-                </span>
-                <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">
-                  OOP
-                </span>
-                <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">
-                  Data Modeling
-                </span>
-              </div>
-            </div>
-
-            {/* Currently Learning */}
-            <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Currently Learning
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
-                  JavaScript
-                </span>
-                <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
-                  TypeScript
-                </span>
-                <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
-                  React
-                </span>
-                <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
-                  Next.js
-                </span>
-                <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
-                  Tailwind CSS
-                </span>
-                <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
-                  Node.js
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
-      </section>
+      <SkillsSection />
 
       {/* Projects Section */}
       <section id="projects" className="relative px-6 pt-24 pb-60 bg-stone-200 dark:bg-zinc-900">
