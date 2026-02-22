@@ -1,43 +1,58 @@
-"use client"
+"use client";
 
-import { LucideIcon } from "lucide-react"
+import { LucideIcon } from "lucide-react";
 
 export type Skill = {
-    name: string
-    icon: LucideIcon
-    years: number
-    yearLabel?: string
+  name: string;
+  icon: LucideIcon;
+  years: number;
+  yearLabel?: string;
 };
 
 type SkillCardProps = {
-    title: string
-    accentColor: string
-    skills: Skill[]
-}
+  title: string;
+  accentColor: string;
+  skills: Skill[];
+};
 
-export default function SkillCard({ title, accentColor, skills }: SkillCardProps) {
-    return (
-        <div className="bg-white dark:bg-zinc-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-zinc-700/50 flex flex-col">
-            <div className={`h-1 w-full ${accentColor}`} />
-            <div className="p-5 flex flex-col gap-4 flex-1">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white tracking-tight">
-                    {title}
-                </h3>
-                <div className="flex flex-col gap-2">
-                    {skills.map((skill) => (
-                        <SkillRow key={skill.name} skill={skill} accentColor={accentColor} />
-                    ))}
-                </div>
-            </div>
+export default function SkillCard({
+  title,
+  accentColor,
+  skills,
+}: SkillCardProps) {
+  return (
+    <div className="bg-white dark:bg-zinc-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-zinc-700/50 flex flex-col">
+      <div className={`h-1 w-full ${accentColor}`} />
+      <div className="p-5 flex flex-col gap-4 flex-1">
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white tracking-tight">
+          {title}
+        </h3>
+        <div className="flex flex-col gap-2">
+          {skills.map((skill) => (
+            <SkillRow
+              key={skill.name}
+              skill={skill}
+              accentColor={accentColor}
+            />
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
-function SkillRow({ skill, accentColor }: { skill: Skill, accentColor: string }) {
-    const Icon = skill.icon;
-    const label = skill.yearLabel ?? (skill.years === 1 ? "1 year" : `${skill.years} years`);
-    return (
-        <div className="group relative flex items-center gap-3 px-3 py-2 rounded-lg cursor-default overflow-hidden">
+function SkillRow({
+  skill,
+  accentColor,
+}: {
+  skill: Skill;
+  accentColor: string;
+}) {
+  const Icon = skill.icon;
+  const label =
+    skill.yearLabel ?? (skill.years === 1 ? "1 year" : `${skill.years} years`);
+  return (
+    <div className="group relative flex items-center gap-3 px-3 py-2 rounded-lg cursor-default overflow-hidden">
       <div
         className={`
           absolute inset-0 ${accentColor} opacity-0
@@ -71,5 +86,5 @@ function SkillRow({ skill, accentColor }: { skill: Skill, accentColor: string })
         {label}
       </span>
     </div>
-    );
+  );
 }
