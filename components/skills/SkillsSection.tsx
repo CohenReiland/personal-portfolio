@@ -5,52 +5,59 @@ import {
   Coffee,
   Hash,
   Database,
-  Code,
-  Palette,
-  Globe,
-  Braces,
   Atom,
   Triangle,
   Wind,
   GitBranch,
-  Terminal,
-  Layers,
   Network,
-  BookOpen,
-  FlaskConical,
-  Sparkles,
   Server,
+  FileCode,
+  Paintbrush,
+  Flame,
+  Github,
+  Cloud,
+  Boxes,
+  Waypoints,
+  TableProperties,
+  FileCode2,
+  FileType2,
 } from "lucide-react";
 
 const languagesSkills: Skill[] = [
   { name: "Java", icon: Coffee, years: 2 },
-  { name: "C#", icon: Hash, years: 1 },
-  { name: "SQL", icon: Database, years: 1 },
-  { name: "HTML", icon: Code, years: 1 },
-  { name: "CSS", icon: Palette, years: 1 },
+  { name: "C#", icon: Hash, years: 1, yearLabel: "< 1 yr" },
+  { name: "SQL", icon: Database, years: 1, yearLabel: "< 1 yr" },
+  { name: "HTML", icon: FileCode, years: 1, yearLabel: "< 1 yr" },
+  { name: "CSS", icon: Paintbrush, years: 1, yearLabel: "< 1 yr" },
 ];
 
 const frameworksSkills: Skill[] = [
-  { name: "React", icon: Atom, years: 1 },
-  { name: "Next.js", icon: Triangle, years: 1 },
-  { name: "Tailwind CSS", icon: Wind, years: 1 },
-  { name: "Node.js", icon: Server, years: 1, yearLabel: "< 1 yr" },
+  { name: "ASP.NET Core", icon: Server, years: 1, yearLabel: "< 1 yr" },
+  { name: "Blazor", icon: Flame, years: 1, yearLabel: "< 1 yr" },
   { name: "Git", icon: GitBranch, years: 1 },
+  { name: "GitHub", icon: Github, years: 1 },
+  { name: "Microsoft Azure", icon: Cloud, years: 1, yearLabel: "< 1 yr" },
 ];
 
 const conceptsSkills: Skill[] = [
-  { name: "OOP", icon: Layers, years: 2 },
-  { name: "Data Structures", icon: Network, years: 2 },
-  { name: "Algorithms", icon: BookOpen, years: 1 },
-  { name: "Data Modeling", icon: Database, years: 1 },
-  { name: "CLI / Bash", icon: Terminal, years: 1 },
+  { name: "OOP", icon: Boxes, years: 2 },
+  { name: "Data Structures", icon: Network, years: 1 },
+  { name: "Algorithms", icon: Waypoints, years: 1 },
+  {
+    name: "Data Modeling",
+    icon: TableProperties,
+    years: 1,
+    yearLabel: "< 1 yr",
+  },
 ];
 
 const learningSkills: Skill[] = [
-  { name: "JavaScript", icon: Globe, years: 1, yearLabel: "< 1 yr" },
-  { name: "TypeScript", icon: Braces, years: 1, yearLabel: "< 1 yr" },
-  { name: "AI / ML", icon: Sparkles, years: 1, yearLabel: "< 1 yr" },
-  { name: "Flask", icon: FlaskConical, years: 1, yearLabel: "< 1 yr" },
+  { name: "JavaScript", icon: FileCode2, years: 1, yearLabel: "< 1 yr" },
+  { name: "TypeScript", icon: FileType2, years: 1, yearLabel: "< 1 yr" },
+  { name: "React", icon: Atom, years: 1, yearLabel: "< 1 yr" },
+  { name: "Next.js", icon: Triangle, years: 1, yearLabel: "< 1 yr" },
+  { name: "Node.js", icon: Server, years: 1, yearLabel: "< 1 yr" },
+  { name: "Tailwind CSS", icon: Wind, years: 1, yearLabel: "< 1 yr" },
 ];
 
 const cards = [
@@ -74,9 +81,6 @@ export default function SkillsSection() {
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center">
           Skills
         </h2>
-        <p className="text-center text-gray-500 dark:text-gray-400 mb-12 text-sm">
-          Hover over a skill to see how long I have been working with it
-        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {cards.map((card) => (
