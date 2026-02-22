@@ -63,3 +63,34 @@ const cards = [
   { title: "Concepts", skills: conceptsSkills, accentColor: "bg-emerald-500" },
   { title: "Learning", skills: learningSkills, accentColor: "bg-amber-500" },
 ];
+
+export default function SkillsSection() {
+  return (
+    <section
+      id="skills"
+      className="relative px-6 pt-24 pb-60 bg-stone-100 dark:bg-zinc-800"
+    >
+      <div className="max-w-5xl mx-auto w-full">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+          Skills
+        </h2>
+        <p className="text-center text-gray-500 dark:text-gray-400 mb-12 text-sm">
+          Hover over a skill to see how long I have been working with it
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+          {cards.map((card) => (
+            <SkillCard
+              key={card.title}
+              title={card.title}
+              skills={card.skills}
+              accentColor={card.accentColor}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-stone-200 dark:to-zinc-900" />
+    </section>
+  );
+}
